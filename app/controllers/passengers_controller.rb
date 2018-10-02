@@ -38,6 +38,16 @@ class PassengersController < ApplicationController
     end
   end
 
+  def destroy
+    passenger = Passenger.find_by(id: params[:id])
+
+    if passenger.destroy
+      redirect_to passengers_path
+    else
+      render :index, status: :bad_request
+    end
+  end
+
 
 
   private
