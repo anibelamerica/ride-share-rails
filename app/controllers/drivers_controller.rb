@@ -4,14 +4,16 @@ class DriversController < ApplicationController
     @drivers = Driver.all
   end
 
-  
+  def new
+    @driver = Driver.new
+  end
 
   private
 
   def driver_params
     return params.require(:driver).permit(
       :name,
-      :phone_num
+      :vin
     )
   end
 
