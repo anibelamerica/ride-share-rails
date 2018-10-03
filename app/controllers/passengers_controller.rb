@@ -29,9 +29,9 @@ class PassengersController < ApplicationController
   end
 
   def update
-    passenger = Passenger.find(params[:id])
+    @passenger = Passenger.find(params[:id])
 
-    if passenger.update(passenger_params)
+    if @passenger.update(passenger_params)
       redirect_to passenger_path(passenger.id)
     else
       render :edit, status: :bad_request
