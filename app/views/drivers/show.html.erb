@@ -24,7 +24,28 @@
 
     <h2>Driver Trips</h2>
 
-    <!-- driver trip list -->
+    <ul>
+      <li>ID</li>
+      <li>Date</li>
+      <li>Driver</li>
+      <li>Passenger</li>
+      <li>Price</li>
+      <li>Rating</li>
+      <li>Delete</li>
+    </ul>
+
+    <% @driver.trips.each do |trip| %>
+    <ul>
+      <li><%=trip.id%></li>
+      <li><%=trip.date%></li>
+      <li>Driver: <%= link_to trip.driver.name, driver_path(trip.driver.id) %></li>
+      <!-- <li><%=trip.driver.name%></li> -->
+      <li>Passenger: <%=trip.passenger.name%></li>
+      <li><%=trip.cost%></li>
+      <li><%=trip.rating%></li>
+      <li><%= button_to "Delete", trip_path(trip), method: :delete, data: {confirm: "Are you sure you want to delete Trip #{trip.id}?"} %></li>
+    </ul>
+    <% end %>
 
   </section>
 
