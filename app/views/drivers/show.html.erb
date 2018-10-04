@@ -36,7 +36,7 @@
 
     <% @driver.trips.each do |trip| %>
     <ul>
-      <li><%=trip.id%></li>
+      <li><%= link_to trip.id, trip_path(trip.id) %></li>
       <li><%=trip.date%></li>
       <li>Driver: <%= link_to trip.driver.name, driver_path(trip.driver.id) %></li>
       <li>Passenger: <%= link_to trip.passenger.name, passenger_path(trip.passenger.id) %></li>
