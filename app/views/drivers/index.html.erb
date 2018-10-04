@@ -11,7 +11,7 @@
       <%= link_to driver.name, driver_path(driver.id) %>
     </li>
     <li>
-      RATING HERE!!
+      Avg Rating: <%= driver.average_rating %>
     </li>
     <li>
       <%= link_to "Edit", edit_driver_path(driver.id) %>
