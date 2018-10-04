@@ -10,6 +10,29 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="logo">
+            <%= image_tag "logo4.png", alt: "Rideshare on Rails logo. White text on a square black background. The word 'Rideshare' is set in the Futura regular oblique typeface on the top half of the black square, with a dashed horizontal line below it, imitating the lines on a road. The words 'on Rails' are set in the Helvetica regular typeface, with the word 'Rails' horizontally filling the lower half of the black square." %>
+          </li>
+
+          <li class="drivers-link">
+            <%= link_to "Drivers" %>
+            <div class="dropdown-content">
+
+            </div>
+          </li>
+
+          <li class="passengers-link">
+            <%= link_to "Passengers" %>
+            <div class="dropdown-content">
+              
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
