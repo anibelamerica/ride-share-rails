@@ -1,4 +1,5 @@
 class TripsController < ApplicationController
+  include TripsHelper
 
   def show
     @trip = Trip.find_by(id: params[:id])
@@ -14,7 +15,7 @@ class TripsController < ApplicationController
   def create
     @trip = Trip.new(
       date: Date.today,
-      cost: 1,
+      cost: get_cost,
       passenger_id: params[:passenger_id],
       driver_id: 1
     )
