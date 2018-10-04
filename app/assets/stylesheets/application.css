@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+ body {
+   display: flex;
+   justify-content: center;
+ }
+
+ .container {
+   border: 1px solid black;
+   min-width: 600px;
+   max-width: 800px;
+   display: flex;
+   flex-direction: column;
+ }
+
+ nav ul {
+   list-style: none;
+   display: inline;
+ }
+
+ nav li {
+   display: inline-block;
+ }
+
+ .dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     min-width: 100px;
+     box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.2);
+     padding: 4px 16px;
+     z-index: 1;
+ }
+
+ .nav-links:hover .dropdown-content {
+     display: block;
+ }
