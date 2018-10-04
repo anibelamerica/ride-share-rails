@@ -7,4 +7,11 @@ Rails.application.routes.draw do
   resources :trips, except: [:index, :edit]
 
   get "/pages/:page" => "pages#show"
+
+  # resources :passengers do
+  #   resources :trips, only: [:create]
+  # end
+
+  post "/passengers/:passenger_id/trips/", to: 'trips#create', as: 'create_passenger_trip'
+
 end

@@ -20,6 +20,9 @@
       <li>
         <%= link_to "Delete", passenger_path(@passenger), method: :delete, data: {confirm: "Are you sure you want to delete the passenger #{@passenger.name}?"} %>
       </li>
+      <li>
+        <%= link_to "Request Ride", create_passenger_trip_path(@passenger), method: :post %>
+      </li>
     </ul>
   </section>
 
