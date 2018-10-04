@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :drivers
 
+  resources :pages, only: [:show]
 end
