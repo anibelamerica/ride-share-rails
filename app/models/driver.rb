@@ -12,5 +12,8 @@ class Driver < ApplicationRecord
     return (self.trips.sum { |trip| trip.rating} * 1.0 / self.trips.length).round(1)
   end
 
+  def self.search(search)
+  where("name ILIKE ?", "%#{search}%") 
+  end
 
 end

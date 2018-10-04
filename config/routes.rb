@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
   resources :trips, except: [:index, :edit]
 
-  resources :pages, only: [:show]
+  get "/pages/:page" => "pages#show"
 end

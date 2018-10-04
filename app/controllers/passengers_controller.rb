@@ -1,6 +1,10 @@
 class PassengersController < ApplicationController
   def index
-    @passengers = Passenger.all
+    if params[:search]
+      @passengers = Passenger.search(params[:search])
+    else
+      @passengers = Passenger.all
+    end
   end
 
   def show
@@ -29,9 +33,9 @@ class PassengersController < ApplicationController
   end
 
   def update
-    @passenger = Passenger.find(params[:id])
+    passenger = Passenger.find(params[:id])
 
-    if @passenger.update(passenger_params)
+    if passenger.update(passenger_params)
       redirect_to passenger_path(passenger.id)
     else
       render :edit, status: :bad_request

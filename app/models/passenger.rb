@@ -6,4 +6,8 @@ class Passenger < ApplicationRecord
   def amt_charged
     return self.trips.sum { |trip| trip.cost } * 1.0 / 100
   end
+
+  def self.search(search)
+  where("name ILIKE ?", "%#{search}%")
+  end
 end

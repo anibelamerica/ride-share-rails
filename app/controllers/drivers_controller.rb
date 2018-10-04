@@ -1,7 +1,11 @@
 class DriversController < ApplicationController
 
   def index
-    @drivers = Driver.all
+    if params[:search]
+      @drivers = Driver.search(params[:search])
+    else
+      @drivers = Driver.all
+    end
   end
 
   def show
@@ -30,9 +34,9 @@ class DriversController < ApplicationController
   end
 
   def update
-    @driver = Driver.find(params[:id])
+    driver = Driver.find(params[:id])
 
-    if @driver.update(driver_params)
+    if driver.update(driver_params)
       redirect_to driver_path(driver.id)
     else
       render :edit, status: :bad_request
