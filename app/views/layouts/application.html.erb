@@ -20,8 +20,11 @@
           <li class="nav-links">
             <%= link_to "Drivers" %>
             <div class="dropdown-content">
-              <p>
+              <p class="unlast-item">
                 <%= link_to "All Drivers", drivers_path %>
+              </p>
+              <p>
+                <%= link_to "Add Driver", new_driver_path %>
               </p>
             </div>
           </li>
@@ -29,8 +32,11 @@
           <li class="nav-links">
             <%= link_to "Passengers" %>
             <div class="dropdown-content">
-              <p>
+              <p class="unlast-item">
                 <%= link_to "All Passengers", passengers_path %>
+              </p>
+              <p>
+                <%= link_to "Add Passenger", new_passenger_path %>
               </p>
             </div>
           </li>
