@@ -12,10 +12,15 @@ class TripsController < ApplicationController
   end
 
   def create
-    @trip = Trip.new(trip_params)
+    @trip = Trip.new(
+      date: Date.today,
+      cost: 1,
+      passenger_id: params[:passenger_id],
+      driver_id: 1
+    )
 
     if @trip.save
-      redirect_to trips_path
+      redirect_to trip_path(@trip)
     else
       render :new, status: :bad_request
     end
