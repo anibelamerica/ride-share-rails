@@ -8,9 +8,9 @@
   <% end %>
 
   <%= will_paginate @passengers %>
-  <ul>
+  <ul class="entry">
     <% @passengers.each do |passenger| %>
-    <li class="passenger-entry">
+    <li>
       <%= image_tag "http://placekitten.com/50/50", alt: "profile pic" %>
     </li>
     <li>
