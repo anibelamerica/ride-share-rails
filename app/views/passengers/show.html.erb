@@ -14,6 +14,12 @@
       <li>
         PLACEHOLDER FOR TOTAL SPENT
       </li>
+      <li>
+        <%= link_to "Edit", edit_passenger_path(@passenger) %>
+      </li>
+      <li>
+        <%= link_to "Delete", passenger_path(@passenger), method: :delete, data: {confirm: "Are you sure you want to delete the passenger #{@passenger.name}?"} %>
+      </li>
     </ul>
   </section>
 
