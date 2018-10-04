@@ -10,21 +10,20 @@
   <%= will_paginate @drivers %>
 
     <% @drivers.each do |driver| %>
-    <ul class="entry">
-      <li>
+    <ul class="driverentry">
+      <li class="driverpic">
         <%= image_tag "http://placekitten.com/50/50", alt: "profile pic" %>
       </li>
-      <li>
+      <li class="drivername">
         <%= link_to driver.name, driver_path(driver.id) %>
       </li>
-      <li>
+      <li class="driverrating">
         Avg Rating: <%= driver.average_rating %>
       </li>
-      <li>
-        <%= link_to "Edit", edit_driver_path(driver.id) %>
-      </li>
-      <li>
-        <%= link_to "Delete", driver_path(driver), method: :delete, data: {confirm: "Are you sure you want to delete the driver #{driver.name}?"} %>
+      <li class="drivermods">
+        <span class="modify"><%= link_to "Edit", edit_driver_path(driver.id) %></span>
+
+        <span class="modify"><%= link_to "Delete", driver_path(driver), method: :delete, data: {confirm: "Are you sure you want to delete the driver #{driver.name}?"} %></span>
       </li>
     </ul>
     <% end %>

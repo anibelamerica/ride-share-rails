@@ -1,14 +1,33 @@
 // Place all the styles related to the Passengers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.entrycontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .entry {
   padding: 0;
   list-style: none;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 6.5% 10% 5% 30% 42% 6.5%;
   border: 1px solid black;
 }
 
-.modify {
+.pic {
+  grid-column-start: 2;
+}
 
+.name {
+  grid-column-start: 4;
+}
+
+.modifications {
+  grid-column-start: 5;
+  justify-self: end;
+}
+
+.modify {
+  padding: 5px;
 }
