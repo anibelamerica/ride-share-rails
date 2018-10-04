@@ -2,9 +2,9 @@ class DriversController < ApplicationController
 
   def index
     if params[:search]
-      @drivers = Driver.search(params[:search])
+      @drivers = Driver.search(params[:search]).paginate(page: params[:page], per_page: 10)
     else
-      @drivers = Driver.all
+      @drivers = Driver.all.paginate(page: params[:page], per_page: 10)
     end
   end
 

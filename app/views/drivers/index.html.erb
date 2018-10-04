@@ -1,12 +1,13 @@
 <div id="Drivers-index">
 
   <h2>Rideshare Drivers</h2>
-  
+
   <%= form_tag(drivers_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Search Drivers" %>
       <%= submit_tag "Search", :name => nil %>
   <% end %>
 
+  <%= will_paginate @drivers %>
   <ul>
     <% @drivers.each do |driver| %>
     <li class="driver-entry">
@@ -25,6 +26,6 @@
       <%= link_to "Delete", driver_path(driver), method: :delete, data: {confirm: "Are you sure you want to delete the driver #{driver.name}?"} %>
     </li>
     <% end %>
-
   </ul>
+  <%= will_paginate @drivers %>
 </div>

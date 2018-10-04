@@ -1,9 +1,9 @@
 class PassengersController < ApplicationController
   def index
     if params[:search]
-      @passengers = Passenger.search(params[:search])
+      @passengers = Passenger.search(params[:search]).paginate(page: params[:page], per_page: 10)
     else
-      @passengers = Passenger.all
+      @passengers = Passenger.all.paginate(page: params[:page], per_page: 10)
     end
   end
 
