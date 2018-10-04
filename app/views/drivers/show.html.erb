@@ -46,7 +46,7 @@
       <li><%=trip.date%></li>
       <li>Driver: <%= link_to trip.driver.name, driver_path(trip.driver.id) %></li>
       <li>Passenger: <%= link_to trip.passenger.name, passenger_path(trip.passenger.id) %></li>
-      <li><%=trip.cost%></li>
+      <li>$<%=trip.cost%></li>
       <li><%=trip.rating%></li>
       <li><%= button_to "Delete", trip_path(trip), method: :delete, data: {confirm: "Are you sure you want to delete Trip #{trip.id}?"} %></li>
     </ul>
