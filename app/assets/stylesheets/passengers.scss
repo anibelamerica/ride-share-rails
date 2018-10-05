@@ -15,7 +15,7 @@
   border: 1px solid black;
 }
 
-.pic, .name, .modifications {
+.name, .modifications {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,4 +58,106 @@
   color: slategray;
   text-shadow: 2px 2px 1px lightgray;
   background-color: white;
+}
+
+
+
+
+
+.summary-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.passenger-summary {
+  display: flex;
+}
+
+.namenumreq {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  margin-bottom: 10px;
+}
+
+.request {
+  margin-top: 15px;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100px;
+  text-align: center;
+}
+
+.button {
+  border: 1px solid white;
+  border-radius: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 60px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.request:hover, .button:hover {
+  color: lightgray;
+}
+
+.totalspent {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.totalmods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.passenger-summary section {
+  margin-left: 11px;
+  margin-right: 11px;
+}
+
+
+
+// .passenger-summary ul {
+//   list-style: none;
+//   display: grid;
+//   grid-template-columns: 10% 30% 30%;
+//   grid-template-rows: 20% 20%;
+// }
+//
+// .showpic {
+//   grid-column-start: 1;
+// }
+//
+// .showname, .shownum, .request {
+//   grid-column-start: 2;
+// }
+//
+// .showmod, .showtotal {
+//   grid-column-start: 3;
+// }
+//
+// .showname, .shownum, .showtotal {
+//   grid-row-start: 1;
+// }
+//
+// .request, .showmod {
+//   grid-row-start: 2;
+// }
+
+#passenger-detail-page ul li {
+  // display: inline-block;
 }
