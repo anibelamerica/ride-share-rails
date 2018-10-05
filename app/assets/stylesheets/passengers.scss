@@ -11,7 +11,7 @@
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: 6.5% 10% 5% 30% 42% 6.5%;
+  grid-template-columns: 14% 10% 4% 30% 29% 7%;
   border: 1px solid black;
 }
 
@@ -30,4 +30,26 @@
 
 .modify {
   padding: 5px;
+}
+
+#passengers-index form {
+  display: flex;
+  justify-content: center;
+}
+
+// This rule is repeated in the drivers css file but is also left here to elucidate what is going on with the layout
+.search {
+  margin-left: 20px;
+  margin-top: 2px;
+}
+
+#passengers-index .pagination a, .current, .previous_page, .next_page {
+  padding: 5px;
+  border: 1px solid white;
+}
+
+#passengers-index .pagination a:hover {
+  color: slategray;
+  text-shadow: 2px 2px 1px lightgray;
+  background-color: white;
 }
