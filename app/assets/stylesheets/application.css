@@ -103,3 +103,7 @@
  .nav-links:hover .dropdown-content {
      display: block;
  }
+
+ img[alt="profile pic"] {
+   border-radius: 50%;
+ }
