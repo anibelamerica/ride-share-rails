@@ -4,7 +4,7 @@ class DriversController < ApplicationController
     if params[:search]
       @drivers = Driver.search(params[:search]).paginate(page: params[:page], per_page: 10)
     else
-      @drivers = Driver.all.paginate(page: params[:page], per_page: 10)
+      @drivers = Driver.order(:name).paginate(page: params[:page], per_page: 10)
     end
   end
 

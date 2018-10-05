@@ -8,6 +8,11 @@ class Passenger < ApplicationRecord
   end
 
   def self.search(search)
-  where("name ILIKE ?", "%#{search}%")
+    where("name ILIKE ?", "%#{search}%")
   end
+
+  def self.all_trips_rated
+    return self.trips.select { |trip| trip.rating == nil }.any?
+  end
+
 end

@@ -3,7 +3,7 @@ class PassengersController < ApplicationController
     if params[:search]
       @passengers = Passenger.search(params[:search]).paginate(page: params[:page], per_page: 10)
     else
-      @passengers = Passenger.all.paginate(page: params[:page], per_page: 10)
+      @passengers = Passenger.order(:name).paginate(page: params[:page], per_page: 10)
     end
   end
 
