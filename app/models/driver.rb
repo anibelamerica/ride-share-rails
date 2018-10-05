@@ -2,7 +2,7 @@ class Driver < ApplicationRecord
   validates :name, presence: true
   validates :vin, presence: true
 
-  has_many :trips, dependent: :delete_all
+  has_many :trips, dependent: :nullify
 
   def total_earnings
     return self.trips.sum { |trip| (trip.cost - 1.65) * 0.80 / 100}.round(2)

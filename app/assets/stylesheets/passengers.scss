@@ -11,7 +11,7 @@
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: 16% 10% 4% 30% 25% 7%;
+  grid-template-columns: 18.5% 10% 4% 30% 20% 7%;
   border: 1px solid black;
 }
 
@@ -60,6 +60,10 @@
   background-color: white;
 }
 
+.entry li a:hover {
+  color: lightgray;
+}
+
 
 
 
@@ -71,7 +75,7 @@
   justify-content: center;
 }
 
-.passenger-summary {
+.summary {
   display: flex;
 }
 
@@ -85,9 +89,10 @@
 }
 
 .request {
-  margin-top: 15px;
+  font-style: italic;
   border: 1px solid white;
   border-radius: 25px;
+  margin-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 5px;
@@ -97,6 +102,7 @@
 }
 
 .button {
+  font-style: italic;
   border: 1px solid white;
   border-radius: 25px;
   padding-left: 15px;
@@ -110,7 +116,8 @@
 }
 
 .request:hover, .button:hover {
-  color: lightgray;
+  background-color: white;
+  color: black;
 }
 
 .totalspent {
@@ -124,7 +131,7 @@
   align-items: center;
 }
 
-.passenger-summary section {
+.summary section {
   margin-left: 11px;
   margin-right: 11px;
 }
@@ -206,7 +213,7 @@
 }
 
 
-// .passenger-summary ul {
+// .summary ul {
 //   list-style: none;
 //   display: grid;
 //   grid-template-columns: 10% 30% 30%;
