@@ -39,7 +39,7 @@
         <li class=
         "tripsdriver"><%= link_to trip.driver.name, driver_path(trip.driver.id) %></li>
         <li class="tripspassenger"><%= link_to trip.passenger.name, passenger_path(trip.passenger.id) %></li>
-        <li class="tripsprice">$<%=trip.cost%></li>
+        <li class="tripsprice">$<%=trip.cost_conversion%></li>
         <li class="tripsrating">
           <%if trip.rating == nil%>
             <%= form_with model: trip do |f| %>
