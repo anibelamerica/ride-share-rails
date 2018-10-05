@@ -18,7 +18,7 @@
         <%= link_to driver.name, driver_path(driver.id) %>
       </li>
       <li class="driverrating">
-        Avg Rating: <%= driver.average_rating %>
+        <span>Avg Rating</span> <p class="rating"><%= driver.average_rating %></p>
       </li>
       <li class="drivermods">
         <span class="modify"><%= link_to "Edit", edit_driver_path(driver.id) %></span>

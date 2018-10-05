@@ -15,6 +15,7 @@ h2 {
 
 .search {
   margin-left: 20px;
+  margin-top: 2px;
 }
 
 #drivers-index .pagination a, .current, .previous_page, .next_page {
@@ -42,7 +43,7 @@ ul li a:hover {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: 6.5% 10% 5% 30% 20% 22% 7%;
+  grid-template-columns: 14% 10% 4% 30% 10% 19% 7%;
   border: 1px solid black;
 }
 
@@ -63,6 +64,19 @@ ul li a:hover {
   justify-self: end;
 }
 
-.modify {
-  padding: 5px;
+.driverrating {
+  text-align: center;
+  font-size: .8em;
+}
+
+.driverrating .rating {
+  margin-top: 3px;
+  margin-bottom: 0px;
+  font-size: 1.3em;
+}
+
+.driverpic, .drivername, .drivermods, .driverrating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
