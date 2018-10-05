@@ -38,34 +38,36 @@
  }
 
  .logo {
-   width: 65%;
-   margin: 20px 13% 20px 30px;
+   width: 80%;
+   margin: 20px 13% 20px 40px;
    border: 1px solid white;
  }
 
  nav ul {
    min-width: 56%;
-   margin-top: 120px;
+   margin-top: 140px;
+   margin-right: 50px;
    padding: 0;
    list-style: none;
    display: flex;
-   justify-content: space-around;
+   justify-content: flex-end;
    align-self: center;
  }
 
  nav {
    display: flex;
-   justify-content: flex-start;
+   justify-content: space-between;
  }
 
  nav li {
    align-self: center;
    display: inline-block;
+   margin-left: 20px;
    padding-left: 18px;
    padding-right: 18px;
    padding-top: 6px;
    padding-bottom: 6px;
-   border: 1px white dashed;
+   border: 1px white solid;
    border-radius: 25px;
  }
 
@@ -87,10 +89,6 @@
 
  .dropdown-content a:hover {
    color: lightgray;
- }
-
- .drivers {
-   margin: 20px;
  }
 
  .nav-links:hover .dropdown-content {
