@@ -1,13 +1,19 @@
-<%= render partial: 'layouts/form_errors', locals: { model: @passenger } %>
+<p><h2 class="newdriver">Welcome to our Family, Passenger</h2></p>
 
-<%= form_with model: @passenger, class: 'passenger-form' do |f| %>
+<section class="formcontainer">
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= render partial: 'layouts/form_errors', locals: { model: @passenger } %>
 
-  <%= f.label :phone_number %>
-  <%= f.text_field :phone_num%>
+  <%= form_with model: @passenger, class: 'passenger-form' do |f| %>
 
-  <%= f.submit action_type, class: 'passenger-form-submit-button' %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
 
-<% end %>
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_num%>
+
+    <%= f.submit action_type, class: 'passenger-form-submit-button' %>
+
+  <% end %>
+
+</section>
