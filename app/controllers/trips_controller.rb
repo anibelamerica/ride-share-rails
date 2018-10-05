@@ -57,7 +57,9 @@ class TripsController < ApplicationController
 
   def trip_params
     return params.require(:trip).permit(
-      :rating
+      :rating,
+      :date,
+      :cost
     )
   end
 

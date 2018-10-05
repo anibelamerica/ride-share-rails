@@ -49,7 +49,7 @@
             <%= trip.rating %>
           <% end %>
         </li>
-        <li class="tripsdelete"><%= button_to "Delete", trip_path(trip), method: :delete, data: {confirm: "Are you sure you want to delete Trip #{trip.id}?"} %> <%= link_to "Edit", edit_trip_path(trip), class: "button"%></li>
+        <li class="tripsdelete"><%= button_to "Delete", trip_path(trip), method: :delete, data: {confirm: "Are you sure you want to delete Trip #{trip.id}?"} %></li>
       </ul>
     <% end %>
     </section>
