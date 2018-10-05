@@ -1,10 +1,10 @@
-<div id="Drivers-index">
+<div id="drivers-index">
 
-  <h2>Rideshare Drivers</h2>
+  <h2>Drivers</h2>
 
   <%= form_tag(drivers_path, :method => "get", id: "search-form") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Search Drivers" %>
-      <%= submit_tag "Search", :name => nil %>
+      <%= submit_tag "Search", :name => nil, class: "search" %>
   <% end %>
 
   <%= will_paginate @drivers %>
@@ -12,7 +12,7 @@
     <% @drivers.each do |driver| %>
     <ul class="driverentry">
       <li class="driverpic">
-        <%= image_tag "http://placekitten.com/50/50", alt: "profile pic" %>
+        <%= link_to image_tag("http://placekitten.com/50/50", alt: "profile pic"), driver_path(driver.id) %>
       </li>
       <li class="drivername">
         <%= link_to driver.name, driver_path(driver.id) %>
