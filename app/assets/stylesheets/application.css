@@ -30,8 +30,7 @@
    border: 1px solid black;
    background-color: black;
    height: 100%;
-   min-width: 700px;
-   max-width: 800px;
+   width: 700px;
    display: flex;
    flex-direction: column;
    padding-bottom: 40px;
@@ -106,4 +105,32 @@
 
  img[alt="profile pic"] {
    border-radius: 50%;
+ }
+
+
+
+
+
+ /* NEW FORMS STYLING */
+ .formcontainer {
+   display: flex;
+   justify-content: center;
+ }
+
+ .driver-form {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .driver-form label {
+   display: block;
+   margin: 10px;
+ }
+
+ .driver-form-submit-button {
+   display: block;
+   margin-top: 20px;
+   margin-bottom: 40px;
  }
