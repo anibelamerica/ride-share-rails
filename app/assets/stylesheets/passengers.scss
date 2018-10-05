@@ -129,6 +129,61 @@
   margin-right: 11px;
 }
 
+.yourtrips {
+  margin-bottom: 25px;
+}
+
+.trips-container {
+  height: 300px;
+  border: 1px solid white;
+  border-radius: 25px;
+  margin-left: 35px;
+  margin-right: 35px;
+  margin-bottom: 15px;
+  overflow: scroll;
+}
+
+.trips-headers {
+  list-style: none;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 3fr 3fr 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.trips-headers li {
+  display: inline;
+}
+
+.tripsdate {
+  grid-column-start: 2;
+}
+
+.tripsdriver {
+  grid-column-start: 3;
+}
+
+.tripspassenger {
+  grid-column-start: 4;
+}
+
+.tripsprice {
+  grid-column-start: 5;
+}
+
+.tripsrating {
+  grid-column-start: 6;
+}
+
+.tripsdelete {
+  grid-column-start: 7;
+}
+
+.tripsentries {
+  grid-row-start: 2;
+}
 
 
 // .passenger-summary ul {
