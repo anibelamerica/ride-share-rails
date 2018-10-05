@@ -1,10 +1,31 @@
 // Place all the styles related to the Drivers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.entry {
+.driverentry {
   padding: 0;
   list-style: none;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 6.5% 10% 5% 30% 20% 22% 7%;
   border: 1px solid black;
+}
+
+.driverpic {
+  grid-column-start: 2;
+}
+
+.drivername {
+  grid-column-start: 4;
+}
+
+.driverrating {
+  grid-column-start: 5;
+}
+
+.drivermods {
+  grid-column-start: 6;
+  justify-self: end;
+}
+
+.modify {
+  padding: 5px;
 }
