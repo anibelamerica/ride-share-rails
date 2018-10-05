@@ -134,3 +134,21 @@
    margin-top: 20px;
    margin-bottom: 40px;
  }
+
+ .passenger-form {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .passenger-form label {
+   display: block;
+   margin: 10px;
+ }
+
+ .passenger-form-submit-button {
+   display: block;
+   margin-top: 20px;
+   margin-bottom: 40px;
+ }
