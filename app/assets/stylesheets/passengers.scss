@@ -129,32 +129,42 @@
   margin-right: 11px;
 }
 
+.passenger-trips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .yourtrips {
   margin-bottom: 25px;
 }
 
 .trips-container {
   height: 300px;
+  width: 530px;
   border: 1px solid white;
   border-radius: 25px;
+  padding: 5px 15px 0px 15px;
   margin-left: 35px;
   margin-right: 35px;
   margin-bottom: 15px;
   overflow: scroll;
 }
 
+
 .trips-headers {
   list-style: none;
   padding-left: 40px;
   padding-right: 40px;
+  margin-top: 12px;
 
   display: grid;
-  grid-template-columns: 1fr 1.5fr 3fr 3fr 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr 3fr 3fr 2fr 2fr 1fr;
 }
 
 .trips-headers li {
-  display: inline;
+  text-align: center;
+  text-decoration: underline;
 }
 
 .tripsdate {
@@ -182,7 +192,17 @@
 }
 
 .tripsentries {
-  grid-row-start: 2;
+  list-style: none;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 3fr 3fr 2fr 2fr 1fr;
+}
+
+.tripsentries li {
+  text-align: center;
+  font-size: .8em;
 }
 
 
