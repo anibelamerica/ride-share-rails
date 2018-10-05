@@ -6,6 +6,8 @@ h2 {
   justify-content: center;
   margin-top: 0px;
   margin-bottom: 8px;
+  font-style: italic;
+  font-size: 4em;
 }
 
 #drivers-index form {
@@ -35,7 +37,7 @@ h2 {
   margin-top: 15px;
 }
 
-ul li a:hover {
+.driverentry li a:hover {
   color: lightgray;
 }
 

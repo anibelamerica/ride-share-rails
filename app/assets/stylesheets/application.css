@@ -38,8 +38,8 @@
  }
 
  .logo {
-   width: 80%;
-   margin: 20px 13% 20px 40px;
+   width: 60%;
+   margin: 35px 13% 20px 40px;
    border: 1px solid white;
  }
 
@@ -64,6 +64,14 @@
    display: inline-block;
    margin-left: 20px;
    margin-right: 4px;
+   padding-left: 16px;
+   padding-right: 16px;
+   padding-top: 6px;
+   padding-bottom: 6px;
+   font-style: italic;
+ }
+
+ nav li:hover {
    padding-left: 15px;
    padding-right: 15px;
    padding-top: 5px;
@@ -94,8 +102,4 @@
 
  .nav-links:hover .dropdown-content {
      display: block;
- }
-
- .nav-links:hover > a {
-   color: lightgray;
  }
