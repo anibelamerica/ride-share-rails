@@ -1,13 +1,18 @@
-<%= render partial: 'layouts/form_errors', locals: { model: @driver } %>
+<p><h2 class="newdriver">Welcome to our Family, Driver</h2></p>
 
-<%= form_with model: @driver, class: 'driver-form' do |f| %>
+<section class="formcontainer">
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= render partial: 'layouts/form_errors', locals: { model: @driver } %>
 
-  <%= f.label :vin %>
-  <%= f.text_field :vin%>
+  <%= form_with model: @driver, class: 'driver-form' do |f| %>
 
-  <%= f.submit action_type, class: 'driver-form-submit-button' %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
 
-<% end %>
+    <%= f.label :vin %>
+    <%= f.text_field :vin%>
+
+    <%= f.submit action_type, class: 'driver-form-submit-button' %>
+
+  <% end %>
+</section>
