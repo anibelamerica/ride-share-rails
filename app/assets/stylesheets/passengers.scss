@@ -11,8 +11,14 @@
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: 14% 10% 4% 30% 29% 7%;
+  grid-template-columns: 16% 10% 4% 30% 25% 7%;
   border: 1px solid black;
+}
+
+.pic, .name, .modifications {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .pic {

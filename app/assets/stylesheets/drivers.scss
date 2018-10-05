@@ -43,7 +43,7 @@ ul li a:hover {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: 7% 10% 4% 30% 20% 22% 7%;
+  grid-template-columns: 13% 10% 4% 30% 10% 19% 7%;
   border: 1px solid black;
 }
 
@@ -64,14 +64,19 @@ ul li a:hover {
   justify-self: end;
 }
 
-.modify {
-  padding: 5px;
-}
-
 .driverrating {
   text-align: center;
+  font-size: .8em;
 }
 
 .driverrating .rating {
   margin-top: 3px;
+  margin-bottom: 0px;
+  font-size: 1.3em;
+}
+
+.driverpic, .drivername, .drivermods, .driverrating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
