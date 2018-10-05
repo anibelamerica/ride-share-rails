@@ -17,13 +17,14 @@ class TripsController < ApplicationController
       date: Date.today,
       cost: get_cost,
       passenger_id: params[:passenger_id],
-      driver_id: 1
+      driver_id: first_available_driver
     )
 
     if @trip.save
+      @trip.driver.update_attribute(:status, false)
       redirect_to trip_path(@trip)
     else
-      render :new, status: :bad_request
+      redirect_to passenger_path(params[:passenger_id]), status: :bad_request
     end
   end
 
@@ -39,9 +40,10 @@ class TripsController < ApplicationController
 
   def destroy
     trip = Trip.find_by(id: params[:id])
+    passenger_id = trip.passenger.id
 
     if trip.destroy
-      redirect_to trips_path
+      redirect_to passenger_path(passenger_id)
     else
       render :index, status: :bad_request
     end
