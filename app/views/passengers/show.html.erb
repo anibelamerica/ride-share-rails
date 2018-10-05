@@ -9,7 +9,7 @@
         <span class="name"><%= @passenger.name %></span>
         <span class="num"><%= @passenger.phone_num %></span>
         <span class="totalspent">Total Spent: $<%= @passenger.amt_charged %></span>
-        <%= link_to_unless all_trips_rated, "Request Ride", create_passenger_trip_path(@passenger), method: :post, class: "request" %>
+        <%= link_to_unless @passenger.all_trips_rated, "Request Ride", create_passenger_trip_path(@passenger), method: :post, class: "request" %>
       </section>
       <section class="totalmods">
         <%= link_to "Edit", edit_passenger_path(@passenger), class: "button" %>
