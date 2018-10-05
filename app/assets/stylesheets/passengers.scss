@@ -75,7 +75,7 @@
   justify-content: center;
 }
 
-.passenger-summary {
+.summary {
   display: flex;
 }
 
@@ -131,7 +131,7 @@
   align-items: center;
 }
 
-.passenger-summary section {
+.summary section {
   margin-left: 11px;
   margin-right: 11px;
 }
@@ -213,7 +213,7 @@
 }
 
 
-// .passenger-summary ul {
+// .summary ul {
 //   list-style: none;
 //   display: grid;
 //   grid-template-columns: 10% 30% 30%;
