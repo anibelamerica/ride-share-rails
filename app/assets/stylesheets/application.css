@@ -39,13 +39,13 @@
 
  .logo {
    width: 65%;
-   margin: 13px 13% 40px 15px;
+   margin: 20px 13% 20px 30px;
    border: 1px solid white;
  }
 
  nav ul {
    min-width: 56%;
-   margin-top: 86px;
+   margin-top: 120px;
    padding: 0;
    list-style: none;
    display: flex;
@@ -86,7 +86,7 @@
  }
 
  .dropdown-content a:hover {
-   color: slategray;
+   color: lightgray;
  }
 
  .drivers {
@@ -95,4 +95,8 @@
 
  .nav-links:hover .dropdown-content {
      display: block;
+ }
+
+ .nav-links:hover > a {
+   color: lightgray;
  }
