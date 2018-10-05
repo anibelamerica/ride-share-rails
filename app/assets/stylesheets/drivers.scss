@@ -43,7 +43,7 @@ ul li a:hover {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: 6.5% 10% 5% 30% 20% 22% 7%;
+  grid-template-columns: 7% 10% 4% 30% 20% 22% 7%;
   border: 1px solid black;
 }
 
@@ -66,4 +66,12 @@ ul li a:hover {
 
 .modify {
   padding: 5px;
+}
+
+.driverrating {
+  text-align: center;
+}
+
+.driverrating .rating {
+  margin-top: 3px;
 }
