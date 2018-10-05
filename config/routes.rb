@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :passengers, :drivers
 
-  resources :trips, except: [:index, :edit]
+  resources :trips
 
   get "/pages/:page" => "pages#show"
 
