@@ -3,22 +3,33 @@
   <section class="passenger-trips">
     <h2>Trip #<%= @trip.id %></h2>
 
+    <%= render partial: 'layouts/form_errors', locals: { model: @trip } %>
+
     <%= form_with model: @trip, class: 'trip-form' do |f| %>
+    <div>
+      <%= f.label :date %>
+      <%= f.date_field :date %>
+    </div>
 
-    <%= f.label :date %>
-    <%= f.text_field :date %>
+    <div>
+      <%= f.label :driver %>
+      <%= f.select :driver, @trip.get_drivers %>
+    </div>
 
-    <%= f.label :driver %>
-    <%= f.select :driver, @trip.get_drivers %>
+    <div>
+      <%= f.label :passenger %>
+      <%= f.select :passenger, @trip.get_passengers %>
+    </div>
 
-    <%= f.label :passenger %>
-    <%= f.select :passenger, @trip.get_passengers %>
+    <div>
+      <%= f.label :rating %>
+      <%= f.select :rating, ['1', '2', '3', '4', '5'], {}, { value: @trip.rating, class: 'form-control', onchange: 'this.form.submit();' }%>
+    </div>
 
-    <%= f.label :rating %>
-    <%= f.select :rating, ['1', '2', '3', '4', '5'], {}, { value: @trip.rating, class: 'form-control', onchange: 'this.form.submit();' }%>
-
-    <%= f.label :cost %>
-    <%= f.text_field :cost%>
+    <div>
+      <%= f.label :cost %>
+      <%= f.text_field :cost%>
+    </div>
 
     <%= f.submit "Update Trip", class: 'passenger-form-submit-button' %>
 

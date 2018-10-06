@@ -1,6 +1,7 @@
 class Driver < ApplicationRecord
   validates :name, presence: true
   validates :vin, presence: true
+  validates :name, uniqueness: {scope: :vin, :message => "and vin combination already exists in database."}
 
   has_many :trips, dependent: :destroy
 

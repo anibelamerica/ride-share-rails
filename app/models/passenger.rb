@@ -1,6 +1,8 @@
 class Passenger < ApplicationRecord
   validates :name, presence: true
   validates :phone_num, presence: true
+  validates :name, uniqueness: {scope: :phone_num, :message => "and phone number combination already exists in database."}
+
   has_many :trips, dependent: :destroy
 
   def amt_charged

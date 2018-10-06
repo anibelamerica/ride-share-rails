@@ -11,7 +11,7 @@
       <li class="tripspassenger">Passenger</li>
       <li class="tripsprice">Price</li>
       <li class="tripsrating">Rating</li>
-      <li class="tripsdelete">Delete</li>
+      <li class="tripsdeleteedit">Delete Edit</li>
     </ul>
 
     <ul class="tripsentries"><% trip = @trip %>
@@ -19,7 +19,7 @@
       <li class="tripsdate"><%=@trip.date%></li>
       <li class="tripsdriver"><%= link_to @trip.driver.name, driver_path(@trip.driver.id) %></li>
       <li class="tripspassenger"><%= link_to @trip.passenger.name, passenger_path(@trip.passenger.id) %></li>
-      <li class="tripsprice"><%=@trip.cost%></li>
+      <li class="tripsprice"><%=@trip.cost_conversion%></li>
       <li class="tripsrating"><%=@trip.rating%></li>
       <li class="tripsdelete"><%= button_to "Delete", trip_path(trip), method: :delete, data: {confirm: "Are you sure you want to delete Trip #{trip.id}?"} %> <%= button_to "Edit", edit_trip_path(trip), method: :get%></li>
     </ul>

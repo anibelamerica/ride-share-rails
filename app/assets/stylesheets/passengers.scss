@@ -198,6 +198,13 @@
   grid-column-start: 7;
 }
 
+.tripsdeleteedit {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin-top: -5px;
+}
+
 .tripsentries {
   list-style: none;
   padding-left: 40px;
